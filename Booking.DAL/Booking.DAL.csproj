@@ -50,6 +50,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AbstractDao.cs" />
+    <Compile Include="Entities\Account.cs" />
+    <Compile Include="Entities\Availability.cs" />
+    <Compile Include="Entities\Booking.cs" />
+    <Compile Include="Entities\Event.cs" />
+    <Compile Include="Entities\Gender.cs" />
+    <Compile Include="Entities\HealthIssue.cs" />
     <Compile Include="IDao.cs" />
     <Compile Include="IEntity.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
