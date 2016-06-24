@@ -18,6 +18,6 @@ namespace Booking.DAL.Entities
 
         public string ThumbnailUrl { get; set; }
 
-        public virtual ICollection<Availability> Availability { get; set; }
+        public virtual ICollection<Availability> Availabilities { get; set; }
     }
 }
