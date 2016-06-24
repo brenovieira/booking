@@ -1,8 +1,8 @@
 ﻿using System.Collections.Generic;
 
-namespace Booking.DAL.Entities
+namespace Booking.API.Dto
 {
-    public class Order : IEntity
+    public class Order
     {
         public int Id { get; set; }
 
@@ -16,6 +16,14 @@ namespace Booking.DAL.Entities
 
         public int Weight { get; set; }
 
-        public virtual ICollection<HealthIssue> HealthIssues { get; set; }
+        public ICollection<HealthIssue> HealthIssues { get; set; }
+
+        public bool IsConfirmed
+        {
+            get
+            {
+                return !string.IsNullOrEmpty(Confirmation);
+            }
+        }
     }
 }
