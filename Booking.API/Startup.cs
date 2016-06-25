@@ -23,6 +23,7 @@ namespace Booking.API
             IoCConfig.Register(httpConfig);
             WebApiConfig.Register(httpConfig);
             MapperConfig.Register();
+            DocsConfig.Register(httpConfig);
         }
 
         //see more: http://aspnet.codeplex.com/SourceControl/latest#Samples/Katana/StaticFilesSample/Startup.cs

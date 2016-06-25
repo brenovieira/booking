@@ -5,11 +5,6 @@ namespace Booking.DAL
 {
     public class DBContext : DbContext
     {
-        public DBContext()
-            : base()
-        {
-        }
-
         public DBContext(string nameOrConnectionString)
             : base(nameOrConnectionString)
         {

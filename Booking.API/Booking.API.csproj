@@ -33,6 +33,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <DocumentationFile>bin\Booking.API.XML</DocumentationFile>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -76,6 +77,10 @@
       <HintPath>..\packages\Microsoft.Owin.StaticFiles.3.0.1\lib\net45\Microsoft.Owin.StaticFiles.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="Owin, Version=1.0.0.0, Culture=neutral, PublicKeyToken=f0ebd12fd5e55cc5, processorArchitecture=MSIL">
       <HintPath>..\packages\Owin.1.0\lib\net40\Owin.dll</HintPath>
       <Private>True</Private>
@@ -90,6 +95,10 @@
     </Reference>
     <Reference Include="SimpleInjector.Integration.WebApi, Version=3.1.5.0, Culture=neutral, PublicKeyToken=984cb50dea722e99, processorArchitecture=MSIL">
       <HintPath>..\packages\SimpleInjector.Integration.WebApi.3.1.5\lib\net45\SimpleInjector.Integration.WebApi.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Swashbuckle.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=cd1bb07a5ac7c7bc, processorArchitecture=MSIL">
+      <HintPath>..\packages\Swashbuckle.Core.5.3.2\lib\net40\Swashbuckle.Core.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="System.Net.Http" />
@@ -113,6 +122,10 @@
     <Reference Include="System.Configuration" />
     <Reference Include="System.Web.Services" />
     <Reference Include="System.EnterpriseServices" />
+    <Reference Include="WebActivatorEx, Version=2.0.0.0, Culture=neutral, PublicKeyToken=7b26dc2a43f6a0d4, processorArchitecture=MSIL">
+      <HintPath>..\packages\WebActivatorEx.2.0\lib\net40\WebActivatorEx.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Newtonsoft.Json">
@@ -129,11 +142,51 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="docs\css\print.css" />
+    <Content Include="docs\css\reset.css" />
+    <Content Include="docs\css\screen.css" />
+    <Content Include="docs\css\style.css" />
+    <Content Include="docs\css\typography.css" />
+    <Content Include="docs\docs.js" />
+    <Content Include="docs\fonts\droid-sans-v6-latin-700.svg" />
+    <Content Include="docs\fonts\droid-sans-v6-latin-regular.svg" />
+    <Content Include="docs\images\explorer_icons.png" />
+    <Content Include="docs\images\favicon-16x16.png" />
+    <Content Include="docs\images\favicon-32x32.png" />
+    <Content Include="docs\images\favicon.ico" />
+    <Content Include="docs\images\logo_small.png" />
+    <Content Include="docs\images\pet_store_api.png" />
+    <Content Include="docs\images\throbber.gif" />
+    <Content Include="docs\images\wordnik_api.png" />
+    <Content Include="docs\index.html" />
+    <Content Include="docs\lang\en.js" />
+    <Content Include="docs\lang\es.js" />
+    <Content Include="docs\lang\ja.js" />
+    <Content Include="docs\lang\pt.js" />
+    <Content Include="docs\lang\ru.js" />
+    <Content Include="docs\lang\tr.js" />
+    <Content Include="docs\lang\translator.js" />
+    <Content Include="docs\lang\zh-cn.js" />
+    <Content Include="docs\lib\backbone-min.js" />
+    <Content Include="docs\lib\handlebars-2.0.0.js" />
+    <Content Include="docs\lib\highlight.7.3.pack.js" />
+    <Content Include="docs\lib\jquery-1.8.0.min.js" />
+    <Content Include="docs\lib\jquery.ba-bbq.min.js" />
+    <Content Include="docs\lib\jquery.slideto.min.js" />
+    <Content Include="docs\lib\jquery.wiggle.min.js" />
+    <Content Include="docs\lib\marked.js" />
+    <Content Include="docs\lib\swagger-oauth.js" />
+    <Content Include="docs\lib\underscore-min.js" />
+    <Content Include="docs\o2c.html" />
+    <Content Include="docs\swagger-ui.js" />
+    <Content Include="docs\swagger-ui.min.js" />
     <Content Include="Global.asax" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="App_Start\DocsConfig.cs" />
     <Compile Include="App_Start\MapperConfig.cs" />
+    <Compile Include="App_Start\SwaggerConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\AvailabilityController.cs" />
@@ -155,6 +208,15 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
+    <Content Include="docs\fonts\droid-sans-v6-latin-700.eot" />
+    <Content Include="docs\fonts\droid-sans-v6-latin-700.ttf" />
+    <Content Include="docs\fonts\droid-sans-v6-latin-700.woff" />
+    <Content Include="docs\fonts\droid-sans-v6-latin-700.woff2" />
+    <Content Include="docs\fonts\droid-sans-v6-latin-regular.eot" />
+    <Content Include="docs\fonts\droid-sans-v6-latin-regular.ttf" />
+    <Content Include="docs\fonts\droid-sans-v6-latin-regular.woff" />
+    <Content Include="docs\fonts\droid-sans-v6-latin-regular.woff2" />
+    <Content Include="docs\lib\underscore-min.map" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -163,6 +225,7 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="app\dist\" />
     <Folder Include="App_Data\" />
   </ItemGroup>
   <ItemGroup>

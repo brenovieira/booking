@@ -1,7 +1,9 @@
 ﻿using System.Web.Http;
+using Booking.DAL;
 using Booking.DAL.Dao;
 using SimpleInjector;
 using SimpleInjector.Integration.WebApi;
+using System.Configuration;
 
 namespace Booking.API
 {
@@ -12,11 +14,13 @@ namespace Booking.API
             var container = new Container();
             container.Options.DefaultScopedLifestyle = new WebApiRequestLifestyle();
 
-            container.Register<IAccountDao, AccountDao>(Lifestyle.Transient);
-            container.Register<IAvailabilityDao, AvailabilityDao>(Lifestyle.Transient);
-            container.Register<IEventDao, EventDao>(Lifestyle.Transient);
-            container.Register<IHealthIssueDao, HealthIssueDao>(Lifestyle.Transient);
-            container.Register<IOrderDao, OrderDao>(Lifestyle.Transient);
+            var connectionString = ConfigurationManager.AppSettings["DBContext"];
+            container.Register(() => new DBContext(connectionString), Lifestyle.Scoped);
+            container.Register<IAccountDao, AccountDao>();
+            container.Register<IAvailabilityDao, AvailabilityDao>();
+            container.Register<IEventDao, EventDao>();
+            container.Register<IHealthIssueDao, HealthIssueDao>();
+            container.Register<IOrderDao, OrderDao>();
 
             container.RegisterWebApiControllers(httpConfig);
 
