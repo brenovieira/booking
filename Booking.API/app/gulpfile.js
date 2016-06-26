@@ -8,6 +8,7 @@ var gulp        = require('gulp'),
     cssnano     = require('gulp-cssnano'),
     less        = require('gulp-less'),
     ngAnnotate  = require('gulp-ng-annotate'),
+    replace     = require('gulp-regex-replace'),
     rev         = require('gulp-rev'),
     revReplace  = require('gulp-rev-replace'),
     revDel      = require('rev-del');
@@ -59,6 +60,7 @@ gulp.task('js', function () {
         .pipe(sourcemaps.init())
         .pipe(ngAnnotate().on('error', function (err) { console.log(err); }))
         .pipe(concat(paths.scriptsFile))
+		.pipe(replace({ regex: '.html', replace: '.html?v=' + Date.now() }))
         .pipe(uglify())
         .pipe(sourcemaps.write())
         .pipe(gulp.dest(paths.dest))

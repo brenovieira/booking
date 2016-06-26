@@ -237,7 +237,11 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="app\components\" />
+    <Folder Include="app\components\account\" />
+    <Folder Include="app\components\base\" />
+    <Folder Include="app\components\event\" />
+    <Folder Include="app\components\home\" />
+    <Folder Include="app\components\order\" />
     <Folder Include="app\directives\" />
     <Folder Include="app\filters\" />
     <Folder Include="App_Data\" />
