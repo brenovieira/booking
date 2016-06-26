@@ -5,9 +5,9 @@
         .module('Booking')
         .run(run);
 
-    run.$inject = [];
+    run.$inject = ['$rootScope', 'constants'];
 
-    function run() {
-
+    function run($rootScope, constants) {
+        $rootScope.constants = constants;
     }
 })();

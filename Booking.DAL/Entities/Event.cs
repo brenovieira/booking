@@ -1,5 +1,4 @@
 ﻿using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Booking.DAL.Entities
 {
@@ -7,14 +6,9 @@ namespace Booking.DAL.Entities
     {
         public int Id { get; set; }
 
-        [Index]
-        public string Url { get; set; }
-
         public string Title { get; set; }
 
         public string Description { get; set; }
-
-        public string VideoUrl { get; set; }
 
         public string ThumbnailUrl { get; set; }
 

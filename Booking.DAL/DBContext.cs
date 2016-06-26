@@ -10,8 +10,6 @@ namespace Booking.DAL
         {
         }
 
-        public DbSet<Account> Accounts { get; set; }
-
         public DbSet<Availability> Availabilities { get; set; }
 
         public DbSet<Event> Events { get; set; }
@@ -19,6 +17,8 @@ namespace Booking.DAL
         public DbSet<HealthIssue> HealthIssues { get; set; }
 
         public DbSet<Order> Orders { get; set; }
+
+        public DbSet<Person> People { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {

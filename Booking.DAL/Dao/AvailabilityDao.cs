@@ -5,7 +5,7 @@ namespace Booking.DAL.Dao
 {
     public interface IAvailabilityDao : IDao<Availability>
     {
-        IQueryable<Availability> GetByEventId(int eventId);
+        IQueryable<Availability> GetByEventId(int eventId, int quantity);
     }
 
     public class AvailabilityDao : AbstractDao<Availability>, IAvailabilityDao
@@ -15,9 +15,9 @@ namespace Booking.DAL.Dao
         {
         }
 
-        public IQueryable<Availability> GetByEventId(int eventId)
+        public IQueryable<Availability> GetByEventId(int eventId, int quantity)
         {
-            return Queryable().Where(s => s.EventId == eventId);
+            return Queryable().Where(s => s.EventId == eventId && s.Quantity >= quantity);
         }
     }
 }

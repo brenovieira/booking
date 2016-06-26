@@ -54,14 +54,13 @@
     <Compile Include="Dao\HealthIssueDao.cs" />
     <Compile Include="Dao\EventDao.cs" />
     <Compile Include="Dao\AvailabilityDao.cs" />
-    <Compile Include="Dao\AccountDao.cs" />
     <Compile Include="DBContext.cs" />
-    <Compile Include="Entities\Account.cs" />
     <Compile Include="Entities\Availability.cs" />
     <Compile Include="Entities\Order.cs" />
     <Compile Include="Entities\Event.cs" />
     <Compile Include="Entities\Gender.cs" />
     <Compile Include="Entities\HealthIssue.cs" />
+    <Compile Include="Entities\Person.cs" />
     <Compile Include="IDao.cs" />
     <Compile Include="IEntity.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

@@ -6,24 +6,12 @@ namespace Booking.API.Dto
     {
         public int Id { get; set; }
 
+        public int EventId { get; set; }
+
         public string Confirmation { get; set; }
 
-        public string Name { get; set; }
+        public ICollection<Person> People { get; set; }
 
-        public int Age { get; set; }
-
-        public Gender Gender { get; set; }
-
-        public int Weight { get; set; }
-
-        public ICollection<HealthIssue> HealthIssues { get; set; }
-
-        public bool IsConfirmed
-        {
-            get
-            {
-                return !string.IsNullOrEmpty(Confirmation);
-            }
-        }
+        public Event Event { get; set; }
     }
 }

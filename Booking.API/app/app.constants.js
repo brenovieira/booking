@@ -6,12 +6,6 @@
         .constant('constants', {
             base: '',
             api: {
-                account: {
-                    get: '/api/account',
-                    getById: '/api/account/{id}',
-                    save: '/api/account/{id}',
-                    delete: '/api/account/{id}',
-                },
                 availability: {
                     get: '/api/availability',
                     getById: '/api/availability/{id}',
@@ -39,9 +33,8 @@
             },
             routes: {
                 home: { route: '/home', view: '/app/components/home/index.html', controller: 'homeController' },
-                account: { route: '/account', view: '/app/components/account/index.html', controller: 'accountController' },
-                event: { route: '/event', view: '/app/components/event/index.html', controller: 'eventController' },
-                order: { route: '/order', view: '/app/components/order/index.html', controller: 'orderController' },
+                event: { route: '/event/:id', view: '/app/components/event/index.html', controller: 'eventController' },
+                order: { route: '/order/:id', view: '/app/components/order/index.html', controller: 'orderController' },
             }
         });
 })();

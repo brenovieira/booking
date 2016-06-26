@@ -7,17 +7,16 @@ namespace Booking.API
     {
         public static void Register()
         {
-            //https://github.com/AutoMapper/AutoMapper/wiki/Configuration
+            // https://github.com/AutoMapper/AutoMapper/wiki/Configuration
             Mapper.Initialize(cfg =>
             {
-                cfg.CreateMap<DAL.Entities.Account, Account>();
+                cfg.CreateMap<DAL.Entities.Person, Person>();
                 cfg.CreateMap<DAL.Entities.Availability, Availability>();
                 cfg.CreateMap<DAL.Entities.Event, Event>();
                 cfg.CreateMap<DAL.Entities.HealthIssue, HealthIssue>();
                 cfg.CreateMap<DAL.Entities.Order, Order>();
 
-
-                cfg.CreateMap<Account, DAL.Entities.Account>();
+                cfg.CreateMap<Person, DAL.Entities.Person>();
                 cfg.CreateMap<Availability, DAL.Entities.Availability>();
                 cfg.CreateMap<Event, DAL.Entities.Event>();
                 cfg.CreateMap<HealthIssue, DAL.Entities.HealthIssue>();

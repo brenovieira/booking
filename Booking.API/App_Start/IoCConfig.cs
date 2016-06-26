@@ -16,7 +16,6 @@ namespace Booking.API
 
             var connectionString = ConfigurationManager.AppSettings["DBContext"];
             container.Register(() => new DBContext(connectionString), Lifestyle.Scoped);
-            container.Register<IAccountDao, AccountDao>();
             container.Register<IAvailabilityDao, AvailabilityDao>();
             container.Register<IEventDao, EventDao>();
             container.Register<IHealthIssueDao, HealthIssueDao>();

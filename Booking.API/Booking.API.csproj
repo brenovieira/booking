@@ -146,7 +146,19 @@
     <Content Include="app\app.constants.js" />
     <Content Include="app\app.routes.js" />
     <Content Include="app\app.run.js" />
+    <Content Include="app\components\availability\service.js" />
+    <Content Include="app\components\event\controller.js" />
+    <Content Include="app\components\event\index.html" />
+    <Content Include="app\components\event\service.js" />
+    <Content Include="app\components\home\controller.js" />
+    <Content Include="app\components\home\index.html" />
+    <Content Include="app\components\order\controller.js" />
+    <Content Include="app\components\order\index.html" />
+    <Content Include="app\components\order\service.js" />
+    <Content Include="app\filters\html.filter.js" />
     <Content Include="app\gulpfile.js" />
+    <Content Include="app\images\loading.gif" />
+    <Content Include="app\images\logo.png" />
     <Content Include="app\module.js" />
     <Content Include="docs\css\print.css" />
     <Content Include="docs\css\reset.css" />
@@ -195,16 +207,15 @@
     <Compile Include="App_Start\MapperConfig.cs" />
     <Compile Include="App_Start\SwaggerConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
-    <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\AvailabilityController.cs" />
     <Compile Include="Controllers\HealthIssueController.cs" />
     <Compile Include="Controllers\OrderController.cs" />
     <Compile Include="Controllers\EventController.cs" />
-    <Compile Include="Dto\Account.cs" />
     <Compile Include="Dto\Availability.cs" />
     <Compile Include="Dto\Event.cs" />
     <Compile Include="Dto\Gender.cs" />
     <Compile Include="Dto\HealthIssue.cs" />
+    <Compile Include="Dto\Person.cs" />
     <Compile Include="Dto\Order.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -229,6 +240,7 @@
     <Content Include="app\css\app.less" />
     <Content Include="app\bower.json" />
     <Content Include="app\package.json" />
+    <Content Include="app\components\base\service.factory.js" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -237,13 +249,7 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="app\components\account\" />
-    <Folder Include="app\components\base\" />
-    <Folder Include="app\components\event\" />
-    <Folder Include="app\components\home\" />
-    <Folder Include="app\components\order\" />
     <Folder Include="app\directives\" />
-    <Folder Include="app\filters\" />
     <Folder Include="App_Data\" />
   </ItemGroup>
   <ItemGroup>

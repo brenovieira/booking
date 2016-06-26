@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Booking.DAL.Entities
 {
@@ -6,16 +7,16 @@ namespace Booking.DAL.Entities
     {
         public int Id { get; set; }
 
+        [ForeignKey("Event")]
+        public int EventId { get; set; }
+
+        [Index(IsUnique = true)]
         public string Confirmation { get; set; }
 
-        public string Name { get; set; }
+        public decimal Price { get; set; }
 
-        public int Age { get; set; }
+        public virtual ICollection<Person> People { get; set; }
 
-        public Gender Gender { get; set; }
-
-        public int Weight { get; set; }
-
-        public virtual ICollection<HealthIssue> HealthIssues { get; set; }
+        public virtual Event Event { get; set; }
     }
 }
